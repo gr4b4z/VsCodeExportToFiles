@@ -1,0 +1,61 @@
+{
+  "name": "vscode-new-file",
+  "displayName": "Export To New File",
+  "description": "An easier way to split file into new files",
+  "version": "0.0.1",
+  "icon": "images/logo-300x.png",
+  "galleryBanner": {
+    "color": "#eeeeee",
+    "theme": "light"
+  },
+  "license": "MIT",
+  "publisher": "sgrabowski",
+  "engines": {
+    "vscode": "^0.10.1"
+  },
+  "categories": [
+    "Other"
+  ],
+  "bugs": {
+    "url": "https://github.com/gr4b4z/VsCodeExportToFiles/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gr4b4z/VsCodeExportToFiles.git"
+  },
+  "activationEvents": [
+    "onCommand:extension.exportToNewFile"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.exportToNewFile",
+        "title": "Files: Cut and export to new file"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.exportToNewFile",
+        "key": "alt+ctrl+f",
+        "mac": "alt+cmd+f"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mockery": "^1.4.0",
+    "rimraf": "^2.4.4",
+    "sinon": "^1.17.2",
+    "typescript": "^1.6.2",
+    "vscode": "0.10.x"
+  },
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "q": "^1.4.1"
+  }
+}
